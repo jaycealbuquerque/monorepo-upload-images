@@ -4,10 +4,16 @@
   "scripts": {
     "dev": "tsx watch src/index.ts"
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@repo/eslint-config": "*",
     "@repo/prettier": "*",
     "@repo/tsconfig": "*",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
     "@types/node": "^20.12.8",
     "tsx": "^4.7.2"
   },
@@ -16,5 +22,12 @@
     "extends": [
       "@repo/eslint-config/node"
     ]
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "decimal.js": "^10.4.3",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "prisma": "^5.14.0"
   }
 }
